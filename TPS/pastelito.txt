@@ -1,0 +1,3 @@
+Definir un puntero = int* pointeur
+Direccion de la variable = &variable
+Acceder a la variable = *pointeur 
