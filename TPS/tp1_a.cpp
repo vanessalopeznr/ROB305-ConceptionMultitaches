@@ -1,4 +1,4 @@
-// [TD-1] Mesure de temps et échantillonnage en temps. Juan RAMIREZ
+// [TD-1] Mesure de temps et échantillonnage en temps. Juan RAMIREZ et Vanessa LOPEZ
 #include <iostream>
 #include <time.h>
 #include <unistd.h>
