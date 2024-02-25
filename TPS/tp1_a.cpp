@@ -1,5 +1,4 @@
-// Execute: g++ tp1_a.cpp time.cpp -o executable.exe
-
+// [TD-1] Mesure de temps et échantillonnage en temps. Juan RAMIREZ
 #include <iostream>
 #include "time.h"
 
