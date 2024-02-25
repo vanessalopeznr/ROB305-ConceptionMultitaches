@@ -1,4 +1,6 @@
-//Executer: g++ tp2_a.cpp tp1_a.cpp -o executable.exe
+// [Executer] 
+// g++ tp2_a.cpp time.cpp -o executable.exe
+// ./executable.exe 100000(loop) 5(tasks)
 
 #include <iostream>
 #include <string>

@@ -1,4 +1,6 @@
-//Executer: g++ tp1_c.cpp tp1_a.cpp -o executable.exe
+// [Executer] 
+// g++ tp1_c.cpp time.cpp -o executable.exe
+// ./executable 100(MaxCounter)
 
 #include <iostream>
 #include <string>

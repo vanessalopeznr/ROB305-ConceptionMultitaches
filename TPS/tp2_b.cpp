@@ -1,4 +1,6 @@
-//Executer: g++ tp2_b.cpp tp1_a.cpp -o executable.exe
+// [Executer]
+// g++ tp2_b.cpp time.cpp -o executable.exe
+// ./executable 1000000(loop) 5(tasks) p(UtilizMutex)
 
 #include <iostream>
 #include <string>

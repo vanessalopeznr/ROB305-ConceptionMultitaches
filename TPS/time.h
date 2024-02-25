@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <time.h>
-#include <unistd.h>
 
 // a) Gestion simplifiée du temps Posix
 

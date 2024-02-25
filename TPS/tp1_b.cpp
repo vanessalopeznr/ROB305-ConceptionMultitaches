@@ -1,4 +1,4 @@
-// Executer: g++ tp1_b.cpp tp1_a.cpp tp3_b.cpp -o executable.exe
+// Executer: g++ tp1_b.cpp time.cpp Timer.cpp -o executable.exe
 
 #include "Timer.h"
 #include "time.h"

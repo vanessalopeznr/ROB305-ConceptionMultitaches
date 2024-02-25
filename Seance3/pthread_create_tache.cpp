@@ -1,5 +1,4 @@
 #include <iostream>
-#include <pthread.h>
 
 //Creation d'une tache
 

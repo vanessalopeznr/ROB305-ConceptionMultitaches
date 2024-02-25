@@ -7,7 +7,7 @@ struct Data {
         volatile double counter;
 };
 
-void* incrementer(void* v_data) { //void
+void* incrementer(void* v_data) { //void parce que pthread_create exige une methode void
     Data* p_data = (Data*) v_data;
     while (not p_data->stop) {
         p_data->counter += 1.0;
