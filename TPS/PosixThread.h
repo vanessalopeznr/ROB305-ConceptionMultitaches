@@ -2,6 +2,7 @@
 #define PosixThread_h_INCLUDED
 
 #include <pthread.h>
+#include <time.h>
 
 class PosixThread
 {
@@ -31,17 +32,23 @@ class Thread : public PosixThread
     public:
         Thread();
         ~Thread();
+    
+    private:
+        double StartTime;
+        double StopTime;
 
     //Methods
     public:
-        //FALTA
         void start();
-        void run();
-        void* call_run(void* v_thread);
-        void sleep_ms(double delay_ms); //No estoy segura
+        void sleep_ms(double delay_ms);
         double startTime_ms();
         double stopTime_ms();
         double execTime_ms();
+    
+    protected:
+        //Indicates that a function can be overridden in derived classes
+        virtual void run()=0;
+        static void* call_run(void* v_thread);
 };
 
 #endif

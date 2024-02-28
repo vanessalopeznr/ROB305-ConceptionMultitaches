@@ -38,11 +38,13 @@ PosixThread::~PosixThread()
 
 void PosixThread::start(ThreadFunc threadFunc, void* threadArg)
 {
+    isActive=true;
     pthread_create(&posixId, nullptr, threadFunc, threadArg); 
 }
 
 void PosixThread::join()
 {
+    // waits the thread posixId to terminate
     pthread_join(posixId, nullptr);
 }
 
@@ -72,7 +74,7 @@ bool PosixThread::getScheduling(int* p_schedPolicy, int* p_priority)
 
 // --------------------------------- THREAD ---------------------------------
 
-Thread::Thread()
+Thread::Thread() : PosixThread()
 {
 
 }
@@ -84,17 +86,23 @@ Thread::~Thread()
 
 void Thread::start()
 {
-
+    StartTime = startTime_ms();
+    PosixThread::start(&Thread::call_run,this);
 }
-void Thread::run()
+void* Thread::call_run(void* v_thread)
 {
-
+    // Another instance of Thread is created because in a static class you don't have access to non-static member
+    Thread* new_Thread = (Thread*)v_thread;
+    new_Thread->run();
+    new_Thread-> StopTime = new_Thread->stopTime_ms();
+    return new_Thread;
 }
 //void* Thread::call_run(void* v_thread){}
 void Thread::sleep_ms(double delay_ms)
 {
     timespec delay_ts = timespec_from_ms(delay_ms);
-    nanosleep(&delay_ts, nullptr);
+    timespec_wait(delay_ts);
+
 }
 double Thread::startTime_ms()
 {
@@ -108,5 +116,5 @@ double Thread::stopTime_ms()
 }
 double Thread::execTime_ms()
 {
-    return 0.0;
+    return StopTime - StartTime;
 }

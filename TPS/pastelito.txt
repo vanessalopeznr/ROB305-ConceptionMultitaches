@@ -1,3 +1,7 @@
 Definir un puntero = int* pointeur
 Direccion de la variable = &variable
 Acceder a la variable = *pointeur 
+
+
+Volatile = Indicates to the compiler that the variable can be changed at any time by external factors that the compiler is not aware of. It prevents certain optimizations by informing the compiler that the value may change asynchronously.
+Virtual = Indicates that a function can be overridden in derived classes.
