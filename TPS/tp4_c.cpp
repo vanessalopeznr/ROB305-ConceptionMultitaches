@@ -55,7 +55,7 @@ int main()
     int nProd = 3;
     int nCons = 2;
 
-    // Create the Semaphore, the consumers and the producers
+    // Create the Semaphore
     Semaphore semaphore(0);
 
     // Create producer and consumer tasks
