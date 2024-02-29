@@ -29,8 +29,8 @@ class PeriodicTimer : public Timer
 	public :
         volatile int n = 0; 
 
-    protected:
-        void callback();
+    //protected:
+        //virtual void callback()=0;
 };
 
 # endif // Timer_h

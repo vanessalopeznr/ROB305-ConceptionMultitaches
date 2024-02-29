@@ -56,10 +56,10 @@ void Timer::call_callback(int, siginfo_t* si, void*)
     Timer* timer = (Timer*) si->si_value.sival_ptr;
     timer->callback();
 }
-
+/* TEST
 void PeriodicTimer::callback()
 {
 	cout << "Compteur: " << this -> n << endl;
 	(this -> n)++;
-}
+}*/
 
