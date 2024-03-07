@@ -30,11 +30,20 @@ Timer::~Timer()
 }
 
 
-void Timer::start(double duration_ms)
+void Timer::start(double duration_ms, bool isPeriodic)
 {
     itimerspec its;
 	its.it_value = timespec_from_ms(duration_ms);
-	its.it_interval = timespec_from_ms(duration_ms);;
+    if (isPeriodic)
+    {
+        its.it_interval = timespec_from_ms(duration_ms);
+    }
+    else
+    {
+        its.it_interval.tv_sec = 0;
+		its.it_interval.tv_nsec = 0;
+    }
+	
 
 	timer_settime(this -> timerId, 0, &its, NULL);
 }
@@ -56,6 +65,7 @@ void Timer::call_callback(int, siginfo_t* si, void*)
     Timer* timer = (Timer*) si->si_value.sival_ptr;
     timer->callback();
 }
+
 /* TEST
 void PeriodicTimer::callback()
 {

@@ -7,13 +7,13 @@
 #include "Timer.h"
 #include "Looper.h"
 
-class Calibrator : public PeriodicTimer
+class Calibrator : public Timer
 {
     private:
         double a;
         double b;
         std::vector<double> samples;
-        Looper myLooper;
+        Looper looper;
         unsigned nSamples;
     
     public:
@@ -21,6 +21,7 @@ class Calibrator : public PeriodicTimer
         double nLoops(double duration_ms);
 
     protected:
+        // Override for make sure over ride the same method in Timer
         virtual void callback() override;
 };
 

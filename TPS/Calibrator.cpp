@@ -4,9 +4,12 @@
 #include "Calibrator.h"
 #include "Looper.h"
 
-Calibrator::Calibrator(double samplingPeriod_ms, unsigned nSamples)
+Calibrator::Calibrator(double samplingPeriod_ms, unsigned nSamples) : nSamples(nSamples) 
 {
-    myLooper.runLoop();
+    std::cout << "Inicializing calibrator constructor..." << std::endl;
+    start(samplingPeriod_ms,true); //Start Timer
+    looper.runLoop();
+    stop();
 
     double sumX=0, sumXX=0, sumY=0, sumXY=0;
 
@@ -29,13 +32,12 @@ double Calibrator::nLoops(double duration_ms)
 
 void Calibrator::callback()
 {
-    double sample = myLooper.getSample();
-    std::cout << "Sample: " << sample << std::endl;
+    double sample = looper.getSample();
     samples.push_back(sample);
 
     if (samples.size() == nSamples)
     {
-        myLooper.stopLoop();
+        looper.stopLoop();
     }
 
 }

@@ -10,7 +10,7 @@ public:
 	Timer();
 	~Timer();	
 	
-	void start(double duration_ms);
+	void start(double duration_ms, bool isPeriodic);
 	void stop();
 
 protected:
@@ -23,14 +23,12 @@ private:
 	static void call_callback(int, siginfo_t* si, void*); 
 };
 
-
+// TEST
 class PeriodicTimer : public Timer
 {
 	public :
         volatile int n = 0; 
 
-    //protected:
-        //virtual void callback()=0;
 };
 
 # endif // Timer_h
