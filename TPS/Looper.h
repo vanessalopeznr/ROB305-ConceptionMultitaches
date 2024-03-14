@@ -2,6 +2,7 @@
 #define looper_h_INCLUDED
 
 #include <cfloat>
+
 class Looper
 {
     public:

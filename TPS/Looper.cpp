@@ -2,22 +2,16 @@
 
 #include "Looper.h"
 
-Looper::Looper()
-{
+Looper::Looper(){}
 
-}
-
-Looper::~Looper()
-{
-
-}
+Looper::~Looper(){}
 
 double Looper::runLoop(double nLoops)
 {
     doStop = false;
     while (iLoop < nLoops && doStop == false)
     {
-        iLoop++ ;
+        iLoop += 1.0 ;
     }
     return iLoop;
 }

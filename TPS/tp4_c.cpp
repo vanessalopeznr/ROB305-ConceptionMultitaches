@@ -1,4 +1,4 @@
-// Executer: g++ tp4_c.cpp Semaphore.cpp PosixThread.cpp Mutex.cpp -o executable.exe
+// Executer: g++ tp4_c.cpp Semaphore.cpp PosixThread.cpp Mutex.cpp time.cpp -o executable.exe
 
 #include <iostream>
 #include <vector>
