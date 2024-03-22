@@ -5,15 +5,10 @@
 
 // --------------------------------- MUTEX ---------------------------------
 
-Mutex::Mutex(bool IsInversionSafe)
+Mutex::Mutex()
 {
-    pthread_cond_init(&posixCondId, nullptr);
-    if (IsInversionSafe)
-    {
-        pthread_mutexattr_init (&posixAttr);
-        pthread_mutexattr_setprotocol (&posixAttr, PTHREAD_PRIO_INHERIT);
-    }
     pthread_mutex_init(&posixId, &posixAttr);
+    pthread_cond_init(&posixCondId, nullptr);    
 }
 
 Mutex::~Mutex()

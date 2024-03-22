@@ -12,7 +12,7 @@ class Mutex
 
     // Attributs
     public:
-        Mutex(bool IsInversionSafe);
+        Mutex();
         ~Mutex(); //No necesidad de declarar destructor mutex virutal porque no vamos a hacer polimorfismo (no hay clase que deriva de otra)
 
     private:
