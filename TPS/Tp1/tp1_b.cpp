@@ -8,6 +8,7 @@ int main() {
     int counter = 0;
 
     double duration = 500;
+	/*
 	PeriodicTimer test1B;
 
 	test1B.start(duration);
@@ -16,6 +17,6 @@ int main() {
 		continue;
 	}
 	test1B.stop();
-
+	*/
     return 0;
 }

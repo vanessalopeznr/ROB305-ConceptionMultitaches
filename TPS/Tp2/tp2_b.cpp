@@ -49,7 +49,7 @@ int main(int argc, char* argv[]){
     timespec time_ts1 = timespec_now();
 
     for (int i = 0; i < incrementThread.size(); i++){
-        if (argc == 4 && std::strcmp(argv[3], "p") == 0 ) {
+        if (argc == 4 && std::strcmp(argv[3], "true") == 0 ) {
             std::cout << "Utilisation de Mutex" << std::endl;
             pthread_create(&incrementThread[i], nullptr, call_incr_mut, &data);
         }   

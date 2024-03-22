@@ -1,0 +1,1 @@
+add_executable(tp3_c tp3_c.cpp Calibrator.cpp Looper.cpp CpuLoop.cpp Chrono.cpp Timer.cpp time.cpp)
