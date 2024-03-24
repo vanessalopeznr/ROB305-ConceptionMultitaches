@@ -11,7 +11,7 @@
 // Pas inicialise dans les blocks
 PosixThread::PosixThread(): posixId(0), isActive(false)
 {
-    std::cout << "Inicialice posixId en 0" << std::endl;
+    //std::cout << "Inicialice posixId en 0" << std::endl;
     pthread_attr_init(&posixAttr);
 }
 
@@ -20,7 +20,7 @@ PosixThread::PosixThread(pthread_t posixId): posixId(posixId), isActive(false)
     pthread_attr_init(&posixAttr);
     int schedPolicy;
     sched_param schedp;
-    std::cout << "Inicialice posixId en pthread" << std::endl;
+    //std::cout << "Inicialice posixId en pthread" << std::endl;
     //Test the validity of a thread identifier.
     if (pthread_getschedparam(posixId, &schedPolicy, &schedp)<0)
     {

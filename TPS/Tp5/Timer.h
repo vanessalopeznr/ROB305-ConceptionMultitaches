@@ -23,12 +23,5 @@ private:
 	static void call_callback(int, siginfo_t* si, void*); 
 };
 
-// TEST
-class PeriodicTimer : public Timer
-{
-	public :
-        volatile int n = 0; 
-
-};
 
 # endif // Timer_h

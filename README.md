@@ -1,5 +1,9 @@
 # ROB305-ConceptionMultitaches
 
+This work is made by:
+    - **Name**: Juan RAMIREZ
+    - **Name**: Vanessa LOPEZ
+
 For compilation, use the following command in TPS directory:
 
     mkdir build
@@ -17,6 +21,11 @@ To run the files of second Tp, go into the build/Tp2 directory and run the follo
 
     ./tp2_a {loop} {tasks}
     ./tp2_b {loop} {tasks} {UtilizMutex: true or false}
+
+Answer of Tp2 B questions:
+- In tp2-A, when performing several iterations, it can be evidenced that the count does not reach the expected value, because there is no blocking when taking the data and it can be overwritten.
+- In tp2-B, with the mutex we can see that it protects the data while it is being edited and remains available after the modifications have been made.
+
 
 To run the files of third Tp, go into the build/Tp3 directory and run the following command:
 
@@ -36,6 +45,7 @@ To run the files of fourth Tp, go into the build/Tp4 directory and run the follo
         ./tp4_a Then, type "s" to stop and enter
         ./tp4_b
         ./tp4_c
+        ./tp4_d
 
 To run the files of fifth Tp, go into the build/Tp5 directory and run the following command:
     
