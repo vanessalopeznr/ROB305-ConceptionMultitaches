@@ -25,8 +25,11 @@ To run the files of third Tp, go into the build/Tp3 directory and run the follow
     ./tp3_c
 
 Answer of Tp3 B questions: 
-- Call_callback est défini comme statique afin de conserver une copie unique de la fonction membre de la classe sur différents objets.
-- La classe callback() doit être définie comme virtuelle, car elle sera réécrite dans chaque instance différente en fonction de l'application du programme.
+- The constructor must be public to be instantiated when creating an object and the start and stop methods are the interfaces between the user and the operation of the program and must therefore be public. The class must be able to easily access the Callback( ) method without the user being able to manipulate it directly, therefore, it is defined protected. Call_callback() must be private because it is a method that is only used internally by the class and should not be accessible to the user.
+
+- Call_callback is defined as static in order to maintain a single copy of the class member function on different objects.
+
+- The callback() class must be defined as virtual, as it will be rewritten in each different instance according to the program application.
 
 To run the files of fourth Tp, go into the build/Tp4 directory and run the following command:
     
