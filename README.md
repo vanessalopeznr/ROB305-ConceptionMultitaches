@@ -20,7 +20,13 @@ To run the files of second Tp, go into the build/Tp2 directory and run the follo
 
 To run the files of third Tp, go into the build/Tp3 directory and run the following command:
 
+    ./tp3_a
+    ./tp3_b
     ./tp3_c
+
+Answer of Tp3 B questions: 
+- Call_callback est défini comme statique afin de conserver une copie unique de la fonction membre de la classe sur différents objets.
+- La classe callback() doit être définie comme virtuelle, car elle sera réécrite dans chaque instance différente en fonction de l'application du programme.
 
 To run the files of fourth Tp, go into the build/Tp4 directory and run the following command:
     
